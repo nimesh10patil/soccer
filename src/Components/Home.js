@@ -4,7 +4,7 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import LeagueDetails from './League/LeagueDetails'
 import Team from './League/Team'
 import Player from './Player/Player'
-
+const x=0
 function Home() {
     return (
         <div>
