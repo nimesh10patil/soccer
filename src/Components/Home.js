@@ -1,16 +1,16 @@
 import React from 'react'
 import Leagues from './League/Leagues'
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import {BrowserRouter as Router,Link,Route,Switch} from 'react-router-dom'
 import LeagueDetails from './League/LeagueDetails'
 import Team from './League/Team'
 import Player from './Player/Player'
-const x=0
+
 function Home() {
     return (
         <div>
             <Router>
-            <nav className="navbar navbar-expand-xs navbar-light bg-light">
-                <a className="navbar-brand" href="#">My Football Arena</a>
+            <nav className="navbar navbar-expand-sm navbar-light bg-light">
+                <Link className="navbar-brand" to="/">My Football Arena</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -36,6 +36,7 @@ function Home() {
             <Route path="/leagues/:league_id" component={LeagueDetails}></Route>
             <Route path="/team/:team_id" component={Team}></Route>
             <Route path="/player/:player_id" component={Player}></Route>
+            
             </Router>
         </div>
     )
