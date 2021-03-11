@@ -51,12 +51,12 @@ function Player(props) {
                             <thead className="thead-dark">
                                 <tr>
                                     <th>League</th>
-                                    <th>Played</th>
-                                    <th>Goals</th>
-                                    <th>Assists</th>
-                                    <th>Conceded</th>
-                                    <th>Yellow</th>
-                                    <th>Red</th>
+                                    <th>P</th>
+                                    <th>G</th>
+                                    <th>A</th>
+                                    <th>C</th>
+                                    <th>Y</th>
+                                    <th>R</th>
                                 </tr>
 
                             </thead>

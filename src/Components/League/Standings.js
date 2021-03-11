@@ -30,25 +30,24 @@ function Standings({league_Id}) {
 
     return (
 
-        <div className="container-fluid">
+        <div className="container-fluid m-0">
             
-            <div className="row mt-1 justify-content-center text-primary">
+            <div className="row justify-content-center text-primary">
                 {leagueTable[0]?.group}
             </div>
-            <div className="row justify-content-center">
-                <div className="col-lg-8">
-                        
-
-                    <table className="table table-sm">
+            <div className="row justify-content-center p-0">
+                <div className="col-12 col-sm-10 p-0">
+                     <div className="table-responsive">
+                     <table className="table table-sm">
                     <thead className="thead-dark">
                         <tr>
                         <th>Rank</th>
-                        <th scope="col">team</th>
-                        <th scope="col">Played</th>
-                        <th scope="col">Won</th>
-                        <th scope="col">Lost</th>
-                        <th scope="col">For</th>
-                        <th scope="col">Against</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">P</th>
+                        <th scope="col">W</th>
+                        <th scope="col">L</th>
+                        <th scope="col">F</th>
+                        <th scope="col">A</th>
                         <th scope="col">GD</th>
                         <th scope="col">PTS</th>
                         </tr>
@@ -71,6 +70,9 @@ function Standings({league_Id}) {
                         
                     </tbody>
                     </table>
+                     </div>   
+
+                    
                 </div>
                 
             </div>

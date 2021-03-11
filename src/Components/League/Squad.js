@@ -27,6 +27,7 @@ function Squad({team_id}) {
             console.log(response.data.api);
              const attacker=[]
              const defenders=[]
+             const midfielders=[]
              const gks=[]
 
             response.data.api.players.forEach(player => {
@@ -38,7 +39,10 @@ function Squad({team_id}) {
                         defenders.push(player)
                         break
                     case "Midfielder":
-                        gks.push(gks)
+                        midfielders.push(player)
+                        break
+                    case 'Goalkeeper':
+                        gks.push(player)
                         break
                     default:
                         break;
@@ -46,6 +50,7 @@ function Squad({team_id}) {
             });
             setAttackers(attacker)
             setDefenders(defenders)
+            setMidefielders(midfielders)
             setGoalKeepers(gks)
             
           }).catch(function (error) {
@@ -62,7 +67,7 @@ function Squad({team_id}) {
           };
           
           axios.request(options_manager).then(function (response) {
-              console.log(response.data.api.coachs[0])
+              //console.log(response.data.api.coachs[0])
               setManager(response.data.api.coachs[0])
           }).catch(function (error) {
               console.error(error);
@@ -74,11 +79,15 @@ function Squad({team_id}) {
     }, [team_id])
     return (
         <div className="container-fluid">
-            <div className="row">
+            <div className="row justify-content-center">
+                
+                <div className="d-flex flex-column">
+                    
+                
                 <div>
                     Attackers
                 </div>
-                <div className="d-flex flex-row flex-wrap">
+                <div className="d-flex flex-row flex-wrap justify-content-center">
                     {
                         !Attackers?'':
                         Attackers.map(player=><div className="p-2" key={player.player_id}>
@@ -86,10 +95,10 @@ function Squad({team_id}) {
                         </div>)
                     }
                 </div>
-                <div>
+                <div className="p-2">
                     Midfielders
                 </div>
-                <div className="d-flex flex-row flex-wrap">
+                <div className="d-flex flex-row flex-wrap justify-content-center">
                     {
                         !Midefielders?'':
                         Midefielders.map(player=><div className="p-2" key={player.player_id}>
@@ -97,10 +106,10 @@ function Squad({team_id}) {
                         </div>)
                     }
                 </div>
-                <div>
+                <div className="p-2">
                 Defenders
                 </div>
-                <div className="d-flex flex-row flex-wrap">
+                <div className="d-flex flex-row flex-wrap justify-content-center">
                     {
                         !Defenders?'':
                         Defenders.map(player=><div className="p-2" key={player.player_id}>
@@ -108,8 +117,20 @@ function Squad({team_id}) {
                         </div>)
                     }
                 </div>
-                <div>
+                <div className="p-2">
+                Goal Keepers
+                </div>
+                <div className="d-flex flex-row flex-wrap justify-content-center">
+                    {
+                        !GoalKeepers?'':
+                        GoalKeepers.map(player=><div className="p-2" key={player.player_id}>
+                            <Link to={`/player/${player.player_id}`}>{player.player_name}</Link>
+                        </div>)
+                    }
+                </div>
+                <div className="p-2">
                     Manager : {Manager? Manager.name : ''}
+                </div>
                 </div>
             </div>
         </div>
