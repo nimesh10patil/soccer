@@ -30,13 +30,13 @@ function Standings({league_Id}) {
 
     return (
 
-        <div className="container-fluid m-0">
+        <>
             
             <div className="row justify-content-center text-primary">
                 {leagueTable[0]?.group}
             </div>
-            <div className="row justify-content-center p-0">
-                <div className="col-12 col-sm-10 p-0">
+            <div className="row justify-content-center p-0 m-0">
+                <div className="col-12 col-sm-10 p-0 m-0">
                      <div className="table-responsive">
                      <table className="table table-sm">
                     <thead className="thead-dark">
@@ -76,7 +76,7 @@ function Standings({league_Id}) {
                 </div>
                 
             </div>
-        </div>
+        </>
     )
 }
 

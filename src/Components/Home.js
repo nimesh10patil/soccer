@@ -7,11 +7,11 @@ import Player from './Player/Player'
 
 function Home() {
     return (
-        <div className="container">
+        <div className="container-fluid" >
             <Router>
             <div className="row justify-content-center" >
                 <div className="col-12 m-0 p-0">
-                    <nav className="navbar navbar-expand-sm navbar-light bg-light">
+                    <nav className="navbar navbar-expand-sm navbar-light bg-light" style={{backgroundColor:'#007BFF'}}>
                 <Link className="navbar-brand" to="/">My Football Arena</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

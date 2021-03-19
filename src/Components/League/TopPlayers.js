@@ -17,6 +17,7 @@ function TopPlayers({league_Id}) {
           };
           
           axios.request(options).then(function (response) {
+              console.log(response.data.response)
              setPlayers(response.data.response);
           }).catch(function (error) {
               console.error(error);
@@ -54,9 +55,9 @@ function TopPlayers({league_Id}) {
                     {
                         !Players ? 'Loading ...' :
                         Players.map((player,index)=>
-                        <tr>
+                        <tr key={index}>
                             <td>{index+1}</td>
-                            <td><div><span><img className="flag" src={player.player.photo} alt=""/></span><span><Link to={`/player/${player.player.id}`}>{player.player.name}</Link></span></div></td>
+                            <td><div><span><img className="flag" src={player.player.photo} alt=""/></span><span><Link to={`/player/${player.player.id}`}>{player.player.firstname}</Link></span></div></td>
                             <td>{player.statistics[0].goals.total}</td>
                             <td>{player.statistics[0].goals.assists ? player.statistics[0].goals.assists:'0'}</td>
                             <td>{player.statistics[0].games.appearences}</td>

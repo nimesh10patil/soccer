@@ -13,7 +13,7 @@ function LeagueDetails(props) {
         }   
     })
     return (
-        <div className="container-fluid">
+        <>
             
             <div className="row justify-content-start">
                 <div className="col-12 justify-content-center">
@@ -40,13 +40,11 @@ function LeagueDetails(props) {
                                         </div>
                                         <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                                                 {leagueId ? <Matches league_Id={leagueId}/> : 'Loading details'} 
-                                        {leagueId ? <Matches league_Id={leagueId}/> : 'Loading details'} 
-                                                {leagueId ? <Matches league_Id={leagueId}/> : 'Loading details'} 
+                                        
                                         </div>
                                         <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                                             {leagueId ? <TopPlayers league_Id={leagueId}/> : 'Loading details'} 
-                                    {leagueId ? <TopPlayers league_Id={leagueId}/> : 'Loading details'} 
-                                            {leagueId ? <TopPlayers league_Id={leagueId}/> : 'Loading details'} 
+                                    
                                         </div>
                             </div>
                         </div>
@@ -59,7 +57,7 @@ function LeagueDetails(props) {
            
         
         
-        </div>
+        </>
     )
 }
 
