@@ -86,7 +86,7 @@ function Matches({league_Id}) {
                 <Grid container justify="center" spacing={2} alignItems="center" >
                   <Grid item  xs={12} md={10} >
                       <Card className={classes.date}>
-                          <CardContent><span><ArrowBackIosIcon onClick={()=>updateDate(false)}/></span><span>{date.toString().slice(4,15)}</span><span><ArrowForwardIosIcon onClick={()=>updateDate(true)}/></span></CardContent>
+                          <CardContent><span><ArrowBackIosIcon onClick={()=>updateDate(false)}/></span><span>{date.toString().slice(4,15npm )}</span><span><ArrowForwardIosIcon onClick={()=>updateDate(true)}/></span></CardContent>
                       </Card>
                   </Grid>
                   <Grid item  xs={12} md={10}>
